@@ -32,7 +32,7 @@ pipeline {
                 }
             }
         }
-        stage ("Helm Deploy") {
+        stage ("K8s Deploy") {
             steps {
                 script {
                      sh "helm upgrade first --install mychart --namespace helm-deployment --set image.tag=$BUILD_NUMBER"
